@@ -1,2 +1,50 @@
 # logging
 Different type of loging
+
+- Logging to File system  -> Enble Application Logging (Filesystem) in Azure applications - Monitoring - App Service Logs
+      * Microsoft.Extensions.Logging.ApplicationInsights
+      * Microsoft.Extensions.Logging.AzureAppServices
+      **Code:** In programs.cs ->
+        <pre>
+          builder.Logging.AddAzureWebAppDiagnostics();
+          builder.Services.Cofigure<AzureFileLoggerOptions>(options =>
+          {
+            options.FileName = "logs-";
+            options.FileSizeLimit = 50 * 1024;
+            options.RetainedFileConuntLimit = 5;
+          }
+    
+        <a/pre>
+
+        **In appsettings.json**  <br/>
+        <pre>
+          "Logging" : {
+              "LogLevel" : {
+                  "Default": "Information"
+                  "Microsoft" : "Information"
+              },
+              "AzureAppServicesFile:{
+                  "LogLevel"{
+                      "Microsoft": "None"   --> Microsoft, VS, ASP.NET Core system Logs will be avoided"
+                    }
+              }
+          },
+          "AllowedHosts" : "*"
+      </pre>
+
+    ~ Now if we deploy the application to azure, it will log loggs to the file system <br/>
+    ~ Brwse to Application's advance tools under Deployment Tools in the left side menu  -> Click Go in the right hand screen  -> Will open in separate window -> 
+ 
+  <img width="1140" height="650" alt="image" src="https://github.com/user-attachments/assets/d62a3e26-3f2d-4264-b7f2-b8e4cbde85c8" />
+
+    ~ Go to **Debug Console** and select  **CMD or Powershell**   - 
+   <img width="1271" height="692" alt="image" src="https://github.com/user-attachments/assets/665c3f30-8bd2-48be-ae89-f34dae73a416" />
+
+      ~ Click on **LogFiles and then Application**    here we can see all our loggs
+   
+
+
+  
+- Logging to Blob Storage
+- Login to Application Insights
+- 
