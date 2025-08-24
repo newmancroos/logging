@@ -14,7 +14,7 @@ Different type of loging
             options.RetainedFileConuntLimit = 5;
           }
     
-        <a/pre>
+        </pre>
 
         **In appsettings.json**  <br/>
         <pre>
