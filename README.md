@@ -5,6 +5,8 @@ Different type of loging
       * Microsoft.Extensions.Logging.ApplicationInsights
       * Microsoft.Extensions.Logging.AzureAppServices
       **Code:** In programs.cs ->
+
+
         <pre>
           builder.Logging.AddAzureWebAppDiagnostics();
           builder.Services.Cofigure<AzureFileLoggerOptions>(options =>
@@ -13,10 +15,11 @@ Different type of loging
             options.FileSizeLimit = 50 * 1024;
             options.RetainedFileConuntLimit = 5;
           }
-    
         </pre>
 
         **In appsettings.json**  <br/>
+
+
         <pre>
           "Logging" : {
               "LogLevel" : {
@@ -31,6 +34,7 @@ Different type of loging
           },
           "AllowedHosts" : "*"
       </pre>
+  
 
     ~ Now if we deploy the application to azure, it will log loggs to the file system <br/>
     ~ Brwse to Application's advance tools under Deployment Tools in the left side menu  -> Click Go in the right hand screen  -> Will open in separate window -> 
