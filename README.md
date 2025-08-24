@@ -45,6 +45,7 @@ Different type of loging
    <img width="1271" height="692" alt="image" src="https://github.com/user-attachments/assets/665c3f30-8bd2-48be-ae89-f34dae73a416" />
 
       ~ Click on **LogFiles and then Application**    here we can see all our loggs
+      ~ Logiging to File system is not appripreate when we host our application in Low pricing tire.
    
 
 
