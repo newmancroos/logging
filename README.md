@@ -95,7 +95,8 @@ So we can use **Log stream** of Azure application.
        - Select Log Stream, This will open a command prompt and connected to any enabled Logging system  (File log or Blob log)
        - In the command window we can see the live logging while our application runs and if there is any logs
     
-         <img width="1349" height="571" alt="image" src="https://github.com/user-attachments/assets/c7ec533b-30d6-4a00-9161-4a637e78a140" />
+<img width="1349" height="573" alt="image" src="https://github.com/user-attachments/assets/ff4cf908-8c7d-49ae-909b-86c90356bd3c" />
+
          
 
        - 
