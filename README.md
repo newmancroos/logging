@@ -127,3 +127,68 @@ So we can use **Log stream** of Azure application.
   8. Sample KQL :
        - traces  limit 100
   
+
+
+## Other Observability Tools : 
+
+- Dynatrace
+- DataDog
+- New Relic
+- AppDynamics
+
+
+# Azure Monitor
+
+When you have critical applications and business processes that rely on azure resources, you want to monitor those resources for their availability, performance and operation. 
+**Azure Monitor** is a full-stack monitoroing service that provides a complete set of features to monitor your azure resources. <br/> We can also use Azure monitor to monitor resources in other clouds and on-premises.
+
+- Azure monitor tool we can access it in the application's menu in the azure portal.
+      * Overview
+      * Activity Log
+      AND <br/>
+      * Monitoring <br/>
+<img width="2386" height="1337" alt="image" src="https://github.com/user-attachments/assets/95cb7962-3375-4e0a-b5f3-684913d6c7cf" />
+
+## Overview Page:
+The overview page includes details about the resource and often its current state. Many Azure services have **Monitoring** tab includes charts for set of key metricers. Charts are quick way to revoew the operation of the resources.
+
+<img width="2255" height="1218" alt="image" src="https://github.com/user-attachments/assets/2c7bae3b-1303-46ab-b653-e35fcfb018af" />
+
+## Activity Log:
+The **Activity Log** menu item let you view entries in the activity log for resources.
+These are subscription-level events that track operations for each Azure resource, for example, creating a new resource or starting a virtual machine. Activity log events are automatically generated and collected for viewing in Azure portal.
+
+<img width="1217" height="628" alt="image" src="https://github.com/user-attachments/assets/3af3a09d-5f37-48ce-bc46-92d43fe25426" />
+
+## Insights  (In Monitoring menu)
+
+The Insights menu item opens the insight for the resource if the Azure service has one. Insights provide a customized monitoring experience built on the Azure Monitor data platform and standard features. Examples include **Application insights, Container insights, and Virtual machine insights**.
+
+<img width="1383" height="742" alt="image" src="https://github.com/user-attachments/assets/38d95381-1a7e-47d1-98bd-d0ffe108372f" />
+
+## Alerts:  (In Monitoring menu)
+
+Alerts page shows you any recent alerts that were fired for the resource. Alert proactivily notify you when importent conditions are found in your monitoring data and can use data from either Mertics or logs.
+We can create alert according to our needs.
+<img width="2254" height="776" alt="image" src="https://github.com/user-attachments/assets/ce096524-5af0-43ed-ac5e-1176cc490243" />
+
+
+## Metrics  (In Monitoring menu)
+
+The Metrics menu item opens Metrics Explorer which allows you to analyze platform metrics for the resource. These are numerical values that are automatically collected at regular intervals and describe some aspect of a resource at a particular time. You can work with individual metrics or combine multiple metrics to identify correlations and trends. This is the same Metrics Explorer that opens when you select one of the charts on the Overview page
+
+<img width="1218" height="741" alt="image" src="https://github.com/user-attachments/assets/4e8095ec-2548-4ac4-8f37-0ab499105370" />
+
+## Diagnostic Settings (In Monitoring menu)
+
+The Diagnostic settings page lets you create a diagnostic setting to collect the resource logs for your resource. Resource logs provide insight into operations that were performed by an Azure resource, such as getting a secret from a key vault or making a request to a database. Resource logs are generated automatically, but you must create a diagnostic setting to send them to a Log Analytics workspace or some other destination.
+
+<img width="2255" height="876" alt="image" src="https://github.com/user-attachments/assets/0a58a183-d769-408e-a06c-47eeb0e9e72d" />
+
+
+
+
+
+
+
+      
