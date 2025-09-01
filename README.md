@@ -2,6 +2,13 @@
 Different type of loging
 
 - Logging to File system  -> Enble Application Logging (Filesystem) in Azure applications - Monitoring - App Service Logs
+
+  ### Enable Log into file system
+     1. In the azure Application, goto **App Service logs**
+     2. Enable Application Logging(File System)
+     3. Select the Log Level   (may be Information)
+ 
+        
       * Microsoft.Extensions.Logging.ApplicationInsights
       * Microsoft.Extensions.Logging.AzureAppServices
       **Code:** In programs.cs ->
@@ -36,10 +43,6 @@ Different type of loging
       </pre>
   
 
-### Enable Log into file system
-     1. In the azure Application, goto **App Service logs**
-     2. Enable Application Logging(File System)
-     
 
     ~ Now if we deploy the application to azure, it will log loggs to the file system <br/>
     ~ Brwse to Application's advance tools under Deployment Tools in the left side menu  -> Click Go in the right hand screen  -> Will open in separate window -> 
