@@ -56,8 +56,34 @@ Different type of loging
       ~ Logiging to File system is not appripreate when we host our application in Low pricing tire.
    
 
+<img width="996" height="599" alt="image" src="https://github.com/user-attachments/assets/a8d45fb8-1a7b-456c-a3cc-e698cb39bbaa" />
+
+
 
   
 - Logging to Blob Storage
+  1. Enable ** Application logging (Blob)**  in **Azure application -> App Service logs**
+  2. Select log Level
+  3. Configure **Storage Containers** 
+
+  4. program.cs
+  <pre>
+    builder.Logging.AddAzureWebAppDiagnostics();
+    builder.Services.Configure<AzureBlobLoggerOptions> (options =>
+      {
+        options.BlobName = "log.txt";
+      }
+  </pre>
+
+  5. Goto appsettings.json
+     <pre>
+       "AzureAppServiceBlob": {
+         "LogLevel":{
+             "Microsoft" : "None"
+         }
+       }
+     </pre>
+  
+
 - Login to Application Insights
 - 
