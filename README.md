@@ -1,9 +1,10 @@
 # logging
 Different type of loging
 
+## Logging into File System
 - Logging to File system  -> Enble Application Logging (Filesystem) in Azure applications - Monitoring - App Service Logs
 
-  ## Enable Log into file system
+  ### Enable Log into file system
      1. In the azure Application, goto **App Service logs**
      2. Enable Application Logging(File System)
      3. Select the Log Level   (may be Information)
@@ -11,8 +12,8 @@ Different type of loging
         
       * Microsoft.Extensions.Logging.ApplicationInsights
       * Microsoft.Extensions.Logging.AzureAppServices
+  
       **Code:** In programs.cs ->
-
 
         <pre>
           builder.Logging.AddAzureWebAppDiagnostics();
@@ -100,4 +101,28 @@ So we can use **Log stream** of Azure application.
        - 
 
 ## Login to Application Insights
-- 
+- For simple and small applications, Logging into File system or Blob storage is fine, but If we are working on Complex and large application, it is better logging into Application Insight
+- It is not only Logging tool but also it is an extension of Azure Monitor
+  ### How to enable Application insight
+  1. Create Application insight fr out application in Azure
+  2. Go to application's Application insight -> Configure -> Properties  -> Copy Connection String
+  3. Add the connection string into our application appsettings.json
+     <pre>
+       "ConnectionStrings" : {
+         "AppInsights" : "InstrumentationKey..."
+       }
+     </pre>
+  4.  In the application progeam.cs, we need to configure ApplicationInsights
+     <pre>
+       builder.Logging.AddApplicationInsights(
+          configureTelemetryConfiguration: (config) => {
+             confog.ConnectionString = builder.Configuration.GetConnectionString("AppInsights"), configureApplicationInsightsLoggerOptions: (options) => { }
+          }
+       )
+     </pre>
+  5. Now everything is ready we can run the application and check the ApplicationInsight logg
+  6. Goto Application's ApplicationInsights -> Monitoring -> Logs
+  7. We need to use see the Logs we need to use "**Kusto query language (KQL)**", We can select duration in the dropdown options
+  8. Sample KQL :
+       - traces  limit 100
+  
