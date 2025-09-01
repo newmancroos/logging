@@ -3,7 +3,7 @@ Different type of loging
 
 - Logging to File system  -> Enble Application Logging (Filesystem) in Azure applications - Monitoring - App Service Logs
 
-  ### Enable Log into file system
+  ## Enable Log into file system
      1. In the azure Application, goto **App Service logs**
      2. Enable Application Logging(File System)
      3. Select the Log Level   (may be Information)
@@ -59,9 +59,8 @@ Different type of loging
 <img width="996" height="599" alt="image" src="https://github.com/user-attachments/assets/a8d45fb8-1a7b-456c-a3cc-e698cb39bbaa" />
 
 
+## Logging to Blob Storage
 
-  
-- Logging to Blob Storage
   1. Enable ** Application logging (Blob)**  in **Azure application -> App Service logs**
   2. Select log Level
   3. Configure **Storage Containers** 
@@ -86,9 +85,9 @@ Different type of loging
 
   6. After deploying the application, to see the log goto Azure application resource group ->  Select the Storage account -> Container  -> open the folder -> [datewise log] 
 
-## Notes:
+### Notes:
 We log our logs in File system or Blob now. When we have any problem, we need to search the log file or blob to identify the problem. Searching into a large amount of file or blob is very dificult.
 So we can use **Log stream** of Azure application.
 
-- Login to Application Insights
+## Login to Application Insights
 - 
