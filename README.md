@@ -86,5 +86,9 @@ Different type of loging
 
   6. After deploying the application, to see the log goto Azure application resource group ->  Select the Storage account -> Container  -> open the folder -> [datewise log] 
 
+## Notes:
+We log our logs in File system or Blob now. When we have any problem, we need to search the log file or blob to identify the problem. Searching into a large amount of file or blob is very dificult.
+So we can use **Log stream** of Azure application.
+
 - Login to Application Insights
 - 
