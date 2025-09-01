@@ -83,7 +83,8 @@ Different type of loging
          }
        }
      </pre>
-  
+
+  6. After deploying the application, to see the log goto Azure application resource group ->  Select the Storage account -> Container  -> open the folder -> [datewise log] 
 
 - Login to Application Insights
 - 
